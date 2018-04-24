@@ -1,10 +1,10 @@
 #!/bin/bash
 
-curl "http://localhost:4741/projects/${ID}" \
+curl "http://localhost:4741/projects/" \
   --include \
-  --request PATCH \
-  --header "Authorization: Token token=${TOKEN}" \
+  --request POST \
   --header "Content-Type: application/json" \
+  --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "project": {
       "project_title": "'"${TITLE}"'",

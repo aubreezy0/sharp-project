@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class ProjectsController < ApplicationController
+class ProjectsController < OpenReadController
   before_action :set_project, only: %i[show update destroy]
 
   # GET /projects
@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects
   def create
-    @project = Project.new(project_params)
+    @project = current_user.projects.build(project_params)
 
     if @project.save
       render json: @project, status: :created, location: @project
@@ -49,6 +49,6 @@ class ProjectsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def project_params
-    params.require(:project).permit(:project_title, :difficulty, :user_id)
+    params.require(:project).permit(:project_title, :difficulty)
   end
 end
