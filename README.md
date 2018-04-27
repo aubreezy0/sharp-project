@@ -20,7 +20,7 @@ Unsolved Issues:
 The  many_to_one relationship has the drawback that each project can only belong to one user. To meet the original spec, this needs to be changed to a many to many model, in which projects could be saved ("pinned") to a users account, the current model does not allow for that.
 
 ERDs
-https://docs.google.com/spreadsheets/d/1_Ts222wQVUdSmljrJmNMmUYt0SuOG5l9y_kiFeyHOs8/edit#gid=0
+https://docs.google.com/spreadsheets/d/1_Ts222wQVUdSmljrJmNMmUYt0SuOG5l9y_kiFeyHOs8/edit?usp=sharing
 
 Technologies Used:
 
