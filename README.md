@@ -1,7 +1,14 @@
 
 The Sharp Project API README.
 
-Link to client repo: https://github.com/aubreezy0/sharpprojectclient
+Repo Links:
+API:  https://github.com/aubreezy0/sharp-project
+Client: https://github.com/aubreezy0/sharpprojectclient
+
+Deployed Sites:
+
+API: https://pacific-reaches-33989.herokuapp.com/projects
+Client: https://aubreezy0.github.io/sharpprojectclient/
 
 The Sharp Project API was built to support The Sharp Project, a crowd-sourcing tool for browsing and contributing glass project ideas, including a difficulty level for ease of project choice. Due to its complexity I was especially methodical about setting up the back end, and did several revisions of ERD.
 
