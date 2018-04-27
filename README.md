@@ -16,6 +16,9 @@ Early versions of my ERD were very complex. With the help of instructors I was a
 
 As mentioned in my client readme, this project has a lot of potential for making useful information available to a wider audience. Doing so would require introducing a join table of more information, and further careful planning with ERDs.
 
+Unsolved Issues:
+The  many_to_one relationship has the drawback that each project can only belong to one user. To meet the original spec, this needs to be changed to a many to many model, in which projects could be saved ("pinned") to a users account, the current model does not allow for that.
+
 ERDs
 https://docs.google.com/spreadsheets/d/1_Ts222wQVUdSmljrJmNMmUYt0SuOG5l9y_kiFeyHOs8/edit#gid=0
 
