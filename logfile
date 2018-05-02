@@ -1,0 +1,21 @@
+2018-05-02 14:55:42.816 EDT [16302] LOG:  listening on IPv6 address "::1", port 5432
+2018-05-02 14:55:42.816 EDT [16302] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2018-05-02 14:55:42.817 EDT [16302] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2018-05-02 14:55:42.849 EDT [16303] LOG:  database system was interrupted; last known up at 2018-04-30 22:27:59 EDT
+2018-05-02 14:55:43.149 EDT [16303] LOG:  database system was not properly shut down; automatic recovery in progress
+2018-05-02 14:55:43.156 EDT [16303] LOG:  redo starts at 0/22C4938
+2018-05-02 14:55:43.156 EDT [16303] LOG:  invalid record length at 0/22C4A18: wanted 24, got 0
+2018-05-02 14:55:43.156 EDT [16303] LOG:  redo done at 0/22C49E0
+2018-05-02 14:55:43.172 EDT [16302] LOG:  database system is ready to accept connections
+2018-05-02 16:44:28.913 EDT [18945] ERROR:  relation "difficulties" does not exist at character 566
+2018-05-02 16:44:28.913 EDT [18945] STATEMENT:                SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+	                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod,
+	                     c.collname, col_description(a.attrelid, a.attnum) AS comment
+	                FROM pg_attribute a
+	                LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+	                LEFT JOIN pg_type t ON a.atttypid = t.oid
+	                LEFT JOIN pg_collation c ON a.attcollation = c.oid AND a.attcollation <> t.typcollation
+	               WHERE a.attrelid = '"difficulties"'::regclass
+	                 AND a.attnum > 0 AND NOT a.attisdropped
+	               ORDER BY a.attnum
+	
