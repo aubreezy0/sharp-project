@@ -5,9 +5,16 @@ class ProjectsController < OpenReadController
 
   # GET /projects
   def index
-    @projects = current_user.projects.all
+    @projects = Project.all
 
     render json: @projects
+  end
+
+  # GET /projects (self)
+  def my_index
+    @projects = current_user.projects.all
+
+    # render json: @projects
   end
 
   # GET /projects/1
