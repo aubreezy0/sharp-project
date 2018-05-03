@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 class DifficultiesController < ApplicationController
-  before_action :set_difficulty, only: [:show, :update, :destroy]
+  before_action :set_difficulty, only: %i[show]
 
   # GET /difficulties
   def index
@@ -39,13 +41,14 @@ class DifficultiesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_difficulty
-      @difficulty = Difficulty.find(params[:id])
-    end
 
-    # Only allow a trusted parameter "white list" through.
-    def difficulty_params
-      params.require(:difficulty).permit(:rating)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_difficulty
+    @difficulty = Difficulty.find(params[:id])
+  end
+
+  # Only allow a trusted parameter "white list" through.
+  def difficulty_params
+    params.require(:difficulty).permit(:rating)
+  end
 end

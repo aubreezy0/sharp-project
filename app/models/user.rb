@@ -2,5 +2,6 @@
 
 class User < ApplicationRecord
   include Authentication
+  has_many :difficulties, through: :projects
   has_many :projects
 end
