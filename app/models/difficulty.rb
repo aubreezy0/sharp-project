@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 class Difficulty < ApplicationRecord
-  has many :users, through: :projects
-  has many :projects
+  has_many :users, through: :projects
+  has_many :projects
 end
