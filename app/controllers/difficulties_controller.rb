@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class DifficultiesController < ApplicationController
+class DifficultiesController < OpenReadController
   before_action :set_difficulty, only: %i[show]
 
   # GET /difficulties
