@@ -56,6 +56,6 @@ class ProjectsController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def project_params
-    params.require(:project).permit(:project_title, :difficulty)
+    params.require(:project).permit(:project_title)
   end
 end

@@ -1,3 +1,3 @@
 class DifficultySerializer < ActiveModel::Serializer
-  attributes :id, :rating
+  attributes :id, :rating, :users
 end
