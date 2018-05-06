@@ -7,10 +7,8 @@ curl "http://localhost:4741/projects/" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "project": {
-      "project_title": "'"${TITLE}"'"
-    },
-    "difficulty": {
-      "rating": "'"${RATING}"'"
+      "project_title": "'"${TITLE}"'",
+      "difficulty_id": "'"${DID}"'"
     }
   }'
 
