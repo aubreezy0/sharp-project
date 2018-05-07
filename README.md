@@ -14,12 +14,15 @@ The Sharp Project API was built to support The Sharp Project, a crowd-sourcing t
 
 Early versions of my ERD were very complex. With the help of instructors I was able to whittle it down for MVP. The ERD for the show project represents a one to many relationship, with users being able to view all projects, and add many projects, but each of those projects has just one owner who can modify the projects.
 
-As mentioned in my client readme, this project has a lot of potential for making useful information available to a wider audience. Doing so would require introducing a join table of more information, and further careful planning with ERDs.
+As mentioned in my client readme, this project had a lot of potential for making useful information available to a wider audience. For my bonus project I revisited the organization of the tables, breaking out the "project" table into two tables, "project," and "difficulty" making the project table into a join table. Ultimately this will allow users to search projects by difficulty.
 
 Unsolved Issues:
-The  many_to_one relationship has the drawback that each project can only belong to one user. To meet the original spec, this needs to be changed to a many to many model, in which projects could be saved ("pinned") to a users account, the current model does not allow for that.
+In its current release, users can only see their own contributions.
 
-ERDs
+Lesson learned: When breaking up a table, do not give the name of the new table
+the same name as the column you deleted from the original one. It makes tracking "not found" errors very very difficult.
+
+ERDs (updated to include bonus ERD)
 https://docs.google.com/spreadsheets/d/1_Ts222wQVUdSmljrJmNMmUYt0SuOG5l9y_kiFeyHOs8/edit?usp=sharing
 
 Technologies Used:
